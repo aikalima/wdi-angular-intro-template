@@ -1,0 +1,18 @@
+<div class="container">
+  <h3>View 1</h3>
+  Name: <input type="text" ng-model="filter.name" />
+  <ul>
+    <li ng-repeat="student in students | filter:filter.name | orderBy:'name'"> {{ student.name | uppercase }} - {{student.city}}
+  </ul>
+
+  <br/>
+  Student Name:<br />
+  <input type="text" ng-model="newStudent.name" />
+  <br />
+  Student City:<br />
+  <input type="text" ng-model="newStudent.city" />
+  <br/>
+  <button ng-click="addStudent()">Add Student</button>
+  <br />
+  <a href="#/view2">To View 2</a>
+</div>

@@ -1,0 +1,19 @@
+<html ng-app>
+<head>
+</head>
+<body>
+
+<div class="container" ng-init="students=[{name:'Dave',city:'SF'},{name:'Brian',city:'SF'},{name:'Lauren',city:'SF'},{name:'Laura',city:'NY'}]">
+  <h3>Looping using ng-repeat</h3>
+  <input type="text" ng-model="name" />
+  <ul>
+    <li ng-repeat="student in students | filter:name | orderBy:'name'"> {{ student.name | uppercase }} - {{student.city}}
+  </ul>
+
+</div>
+
+<script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js">
+</script>
+</script>
+</body>
+</html>

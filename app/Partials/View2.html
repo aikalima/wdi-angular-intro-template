@@ -1,0 +1,7 @@
+<div class="container">
+  <h3>View 2</h3>
+  City: <input type="text" ng-model="city" />
+  <ul>
+    <li ng-repeat="student in students | filter:city | orderBy:'name'"> {{ student.name | uppercase }} - {{student.city}}
+  </ul>
+</div>
